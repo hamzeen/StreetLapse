@@ -30,13 +30,15 @@
     //-- Route
     var directionsService = new google.maps.DirectionsService();
     var directionsRoute = directionsService.route({
-        destination: new google.maps.LatLng(1.281750, 103.863112),
-        origin: new google.maps.LatLng(1.315051, 103.767357),
+        // 1.281750, 103.863112 | origin: 1.315051, 103.767357
+
+        destination: new google.maps.LatLng(7.042682, 80.517929),
+        origin: new google.maps.LatLng(6.953881, 80.781649),
         travelMode: google.maps.TravelMode.DRIVING
     }, function (DirectionsResult, DirectionsStatus) {
         var routeSequence = StreetviewSequence('#route', {
             route: DirectionsResult,
-            duration: 21000,
+            duration: 24000,
             key: 'AIzaSyDrngdOg3nWWj-FuJ1VyR4R-H1Ur3lglHI',
             loop: true,
             width: 600,
